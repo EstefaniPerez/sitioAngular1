@@ -4,5 +4,5 @@ export interface Hero {
     identidad: string;
     universo: string;
     super: string;
-    
+    edad: number;
 }

@@ -1,38 +1,32 @@
 <h2>Mis heroes Favoritos</h2>
 <ul class="heroes">
-  <li *ngFor="let hero of heroes"
-    [class.selected]="hero === selectedHero"
-      (click)="onSelect(hero)">
-      <span class="badge">{{hero.id}}</span>{{hero.name}}
-    </li>
+ <li *ngFor="let hero of heroes"
+ [class.selected]="hero === selectedHero"
+ (click)="onSelect(hero)">
+ <span class="badge">{{hero.id}}</span>{{hero.name}}
+ </li>
 </ul>
 <div *ngIf="selectedHero">
-  <h2>{{selectedHero.name | uppercase}} detalles</h2>
-  <div><span>id: </span>{{selectedHero.id}}</div>
-  <div>
-    <label for = "hero-name">Nombre: </label>
-      <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="nombre">
-    </div>
-
-    <div>
-    <label for = "hero-identidad">Identidad del superheroe: </label>
-      <input id="hero-identidad" [(ngModel)]="selectedHero.identidad" placeholder="identidad">
-    </div>
-
-    <div>
-        <label for = "hero-universo">Universo al que pertenece: </label>
-          <input id="hero-universo" [(ngModel)]="selectedHero.universo" placeholder="universo">
-        </div>
-
-     <div>
-       <label for = "hero-super">Heroe Super poder: </label>
-          <input id="hero-super" [(ngModel)]="selectedHero.super" placeholder="super">
-        </div>
-
-        <div>
-            <label for = "hero-edad">Heroe Edad: </label>
-              <input id="hero-edad" [(ngModel)]="selectedHero.edad" placeholder="edad">
-            </div>
-
-
+ <h2>{{selectedHero.name | uppercase}} detalles</h2>
+ <div><span>id: </span>{{selectedHero.id}}</div>
+ <div>
+ <label for = "hero-name">Nombre: </label>
+ <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="nombre">
+ </div>
+ <div>
+ <label for = "hero-identidad">Identidad del superheroe: </label>
+ <input id="hero-identidad" [(ngModel)]="selectedHero.identidad" placeholder="identidad">
+ </div>
+ <div>
+ <label for = "hero-universo">Universo al que pertenece: </label>
+ <input id="hero-universo" [(ngModel)]="selectedHero.universo" placeholder="universo">
+ </div>
+ <div>
+ <label for = "hero-super">Heroe Super poder: </label>
+ <input id="hero-super" [(ngModel)]="selectedHero.super" placeholder="super">
+ </div>
+ <div>
+ <label for = "hero-edad">Heroe Edad: </label>
+ <input id="hero-edad" [(ngModel)]="selectedHero.edad" placeholder="edad">
+ </div>
 </div>
